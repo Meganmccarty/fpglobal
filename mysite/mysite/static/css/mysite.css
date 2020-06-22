@@ -97,6 +97,20 @@
     height: 275px;
 }
 
+.styled-button {
+    background-color: rgb(6, 38, 97);
+    color: white;
+    padding: 10px;
+    margin: 5px;
+    border: 0;
+}
+
+.styled-button:hover {
+    background-color: rgb(0, 32, 93);
+    color: white;
+    font-weight: bold;
+}
+
 @media only screen and (max-width: 900px) {
     .text-section .small-container {
         flex-direction: column;
