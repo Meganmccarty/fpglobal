@@ -97,6 +97,21 @@
     height: 275px;
 }
 
+.news {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.news-post {
+    background-color: white;
+    border: 10px solid rgb(203, 177, 150);
+    padding: 10px;
+    width: 100%;
+}
+
 .styled-button {
     background-color: rgb(6, 38, 97);
     color: white;
@@ -107,8 +122,25 @@
 
 .styled-button:hover {
     background-color: rgb(0, 32, 93);
-    color: white;
     font-weight: bold;
+}
+
+.styled-tags {
+    background-color: rgb(203, 177, 150);
+    padding: 10px;
+    margin: 5px;
+    border: 0;
+}
+
+.styled-tags:hover {
+    background-color: rgb(193, 167, 140);
+    font-weight: bold;
+}
+
+.tag-results {
+    padding: 15px;
+    background-color: rgb(203, 177, 150);
+    margin-bottom: -1px;
 }
 
 @media only screen and (max-width: 900px) {
