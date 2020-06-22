@@ -1,15 +1,24 @@
+/* ---------- Basic CSS --------- */
+
+.body {
+    background-color: rgb(6, 38, 97);
+}
+
+/* ---------- Navigation Bar ---------- */
+
 #logo {
     width: 300px;
 }
 
 .nav-bg {
-    /*background: rgb(203, 177, 150);*/
     background: rgb(6, 38, 97);
 }
 
 .navbar-brand {
     background-color: white;
 }
+
+/* ---------- Parallax Images on Home Page ---------- */
 
 .parallax_section {
     position: relative;
@@ -45,6 +54,8 @@
     overflow: hidden;
 }
 
+/* ---------- Text Sections on Home Page ---------- */
+
 .text-section {
     display: flex;
     flex-direction: column;
@@ -52,30 +63,26 @@
     justify-content: space-evenly;
     background-color: rgb(6, 38, 97);
     color: white;
+    height: auto;
+    padding-top: 50px;
     text-align: center;
 }
 
-#first {
-    height: auto;
-    padding-top: 50px;
-}
-
-#second {
-    height: auto;
-    padding: 50px;
-}
-
-.text-section .tan-block {
+#intro {
     background-color: rgb(203, 177, 150);
     border-top: 10px solid white;
     color: black;
-    padding: 50px 100px 50px 100px;
-    margin-bottom: -10px;
     font-size: 25px;
+    margin-bottom: -10px;
+    padding: 50px 100px 50px 100px;
     text-align: center;
 }
 
-.text-section .small-container {
+#expertise-section {
+    padding: 50px;
+}
+
+#small-container {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -87,33 +94,37 @@
     align-items: center;
     justify-content: center;
     background-color: rgb(203, 177, 150);
-    color: black;
     border: 10px solid white;
+    color: black;
     font-size: 25px;
-    text-align: center;
+    height: 275px;
     margin: 10px;
     padding: 20px;
+    text-align: center;
     width: 50%;
-    height: 275px;
 }
 
+/* ---------- Footer ---------- */
+
 .footer {
-    background-color: rgb(6, 38, 97);
-    color: white;
-    height: auto;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding-top: 25px;
+    background-color: rgb(6, 38, 97);
+    color: white;
+    height: auto;
     padding-bottom: 25px;
+    padding-top: 25px;
 }
 
 .footer-item {
+    margin: 10px;
     padding-left: 60px;
     padding-right: 60px;
-    margin: 10px;
 }
+
+/* ---------- News Posts, Buttons, and Tags ---------- */
 
 .news {
     display: flex;
@@ -132,10 +143,10 @@
 
 .styled-button {
     background-color: rgb(6, 38, 97);
-    color: white;
-    padding: 10px;
-    margin: 5px;
     border: 0;
+    color: white;
+    margin: 5px;
+    padding: 10px;
 }
 
 .styled-button:hover {
@@ -145,9 +156,9 @@
 
 .styled-tags {
     background-color: rgb(203, 177, 150);
-    padding: 10px;
-    margin: 5px;
     border: 0;
+    margin: 5px;
+    padding: 10px;
 }
 
 .styled-tags:hover {
@@ -156,10 +167,12 @@
 }
 
 .tag-results {
-    padding: 15px;
     background-color: rgb(203, 177, 150);
     margin-bottom: -1px;
+    padding: 15px;
 }
+
+/* ---------- Media Queries ---------- */
 
 @media only screen and (max-width: 900px) {
     .text-section .small-container {
@@ -167,8 +180,8 @@
     }
 
     .small-item {
-        width: 100%;
         height: 50%;
+        width: 100%;
     }
 
     #parallax_image_third {
