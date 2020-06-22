@@ -97,6 +97,24 @@
     height: 275px;
 }
 
+.footer {
+    background-color: rgb(6, 38, 97);
+    color: white;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.footer-item {
+    padding-left: 60px;
+    padding-right: 60px;
+    margin: 10px;
+}
+
 .news {
     display: flex;
     flex-direction: row;

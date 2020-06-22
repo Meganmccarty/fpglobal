@@ -26,46 +26,56 @@
         {% endblock %}
     </head>
 
-    <nav class="navbar navbar-expand-lg navbar-dark nav-bg">
-        <a class="navbar-brand" href="{% slugurl 'home' %}">
-            <img id="logo" src="../../../media/fp-logo.png" alt="Frumenta Partners LLC logo showing a moth to the left of the logo's text">
-        </a>
-        <button
-            class="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-      
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="{% slugurl 'home' %}">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Services</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">About Us</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% slugurl 'news' %}">News</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#contact">Contact</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-
     <body class="{% block body_class %}{% endblock %}">
         {% wagtailuserbar %}
 
+        <nav class="navbar navbar-expand-lg navbar-dark nav-bg">
+            <a class="navbar-brand" href="{% slugurl 'home' %}">
+                <img id="logo" src="../../../media/fp-logo.png" alt="Frumenta Partners LLC logo showing a moth to the left of the logo's text">
+            </a>
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{% slugurl 'home' %}">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% slugurl 'news' %}">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://127.0.0.1:8000/#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
         {% block content %}{% endblock %}
+
+        <footer class="footer">
+            <div class="footer-item">
+                <p>Website content © 2020 Frumenta Partners, LLC. All rights reserved.</p>
+                <p>davidmccarty@fp-global.us</p>
+            </div>
+            <div class="footer-item">
+                
+            </div>
+        </footer>
 
         {% block extra_js %}
             <!-- JS, Popper.js, and jQuery -->
