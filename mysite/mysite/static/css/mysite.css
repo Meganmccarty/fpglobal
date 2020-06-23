@@ -2,6 +2,7 @@
 
 .body {
     background-color: rgb(6, 38, 97);
+    font-family: 'Playfair Display', serif;
 }
 
 /* ---------- Navigation Bar ---------- */
@@ -137,6 +138,7 @@
 .news-post {
     background-color: white;
     border: 10px solid rgb(203, 177, 150);
+    font-family: 'Open Sans', sans-serif;
     padding: 10px;
     width: 100%;
 }
@@ -175,7 +177,7 @@
 /* ---------- Media Queries ---------- */
 
 @media only screen and (max-width: 900px) {
-    .text-section .small-container {
+    .text-section #small-container {
         flex-direction: column;
     }
 
