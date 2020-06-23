@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load wagtailcore_tags wagtailimages_tags %}
 
 {% block body_class %}template-homepage{% endblock %}
 
@@ -9,10 +10,8 @@
 
 <!--Intro Text-->
 <section class="text-section">
-    <h1>Frumenta Partners, LLC</h1>
-    <p id="intro">Frumenta Partners delivers value to our clients via strategies 
-        and operational improvements to address industry disruption and digital transformation
-    </p>
+    <h1>{{ page.intro_title }}</h1>
+    <span id="intro">{{ page.intro_body | richtext }}</span>
 </section>
 
 <!--Second Parallax Image-->
@@ -20,17 +19,13 @@
 
 <!--Expertise Section-->
 <section id="expertise-section" class="text-section">
-    <h1>Why Frumenta Partners?</h1>
+    <h1>{{ page.expertise_title }}</h1>
     <div id="small-container">
-        <p class="small-item">
-            Deep Industry Expertise
-        </p>
-        <p class="small-item">
-            Relentless focus on value based on intense curiosity coupled with innovative thinking
-        </p>
-        <p class="small-item">
-            Proven approaches and methodologies
-        </p>
+        {% for item in page.expertise_items.all %}
+            <p class="small-item">
+                {{ item.expertise_item }}
+            </p>
+        {% endfor %}
     </div>
 </section>
 
