@@ -7,6 +7,8 @@ from wagtail.core.fields import RichTextField
 from wagtail.admin.edit_handlers import FieldPanel, FieldRowPanel, InlinePanel, MultiFieldPanel
 from wagtail.contrib.forms.models import AbstractEmailForm, AbstractFormField
 
+from wagtailcaptcha.models import WagtailCaptchaEmailForm
+
 
 class HomePage(Page):
     intro_title = models.CharField(max_length=200, default='', null=True, blank=True)
@@ -35,7 +37,7 @@ class NewsPageGalleryImage(Orderable):
 class FormField(AbstractFormField):
     page = ParentalKey('FormPage', related_name='custom_form_fields')
 
-class FormPage(AbstractEmailForm):
+class FormPage(WagtailCaptchaEmailForm):
     
     thank_you_text = RichTextField(blank=True)
 
