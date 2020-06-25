@@ -183,6 +183,28 @@
     width: 100%;
 }
 
+.img-gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.news-page-img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+#image {
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+}
+
 .styled-button, .styled-large-button {
     background-color: rgb(6, 38, 97);
     border: 0;
