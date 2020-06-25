@@ -86,6 +86,7 @@
 #small-container {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-evenly;
 }
@@ -93,6 +94,7 @@
 .small-item {
     display: flex;
     align-items: center;
+    flex-basis: 31%;
     justify-content: center;
     background-color: rgb(203, 177, 150);
     border: 10px solid white;
@@ -103,6 +105,15 @@
     padding: 20px;
     text-align: center;
     width: 50%;
+}
+
+/* ---------- Contact Form ---------- */
+#thank-you {
+    background-color: white;
+    border: 10px solid rgb(203, 177, 150);
+    font-family: 'Open Sans', sans-serif;
+    padding: 10px;
+    width: 100%;
 }
 
 /* ---------- Footer ---------- */
@@ -175,6 +186,12 @@
 }
 
 /* ---------- Media Queries ---------- */
+
+@media only screen and (max-width: 960px) {
+    .small-item {
+        flex-basis: 40%;
+    }
+}
 
 @media only screen and (max-width: 900px) {
     .text-section #small-container {
