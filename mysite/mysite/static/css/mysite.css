@@ -1,5 +1,9 @@
 /* ---------- Basic CSS --------- */
 
+* {
+    overflow-x: hidden;
+}
+
 .body {
     background-color: rgb(6, 38, 97);
     font-family: 'Playfair Display', serif;
@@ -8,7 +12,7 @@
 /* ---------- Navigation Bar ---------- */
 
 #logo {
-    width: 300px;
+    width: 250px;
 }
 
 .nav-bg {
@@ -67,6 +71,7 @@
     height: auto;
     padding-top: 50px;
     text-align: center;
+    width: 100%;
 }
 
 #intro {
@@ -77,6 +82,7 @@
     margin-bottom: -10px;
     padding: 50px 100px 50px 100px;
     text-align: center;
+    width: 100%;
 }
 
 #expertise-section {
@@ -101,8 +107,59 @@
     color: black;
     font-size: 25px;
     height: 275px;
+    margin: 10px 0;
+    padding: 20px;
+    text-align: center;
+    width: 50%;
+}
+
+/* ---------- Services Page ---------- */
+.service-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: rgb(203, 177, 150);
+    color: black;
+    height: auto;
+    padding-top: 50px;
+    text-align: center;
+}
+
+.button-container, .consulting-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.consulting-container {
+    flex-direction: row;
+}
+
+.service-button, .consulting-section {
+    background-color: rgb(6, 38, 97);
+    border: 5px solid white;
+    color: white;
     margin: 10px;
     padding: 20px;
+}
+
+.service-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 800px;
+}
+
+.consulting-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 420px;
     text-align: center;
     width: 50%;
 }
@@ -241,6 +298,16 @@
 }
 
 /* ---------- Media Queries ---------- */
+@media only screen and (max-width: 1050px) {
+    .consulting-container {
+        flex-direction: column;
+    }
+    
+    .consulting-section {
+        width: 100%;
+        height: 50%;
+    }
+}
 
 @media only screen and (max-width: 960px) {
     .small-item {
@@ -260,5 +327,15 @@
 
     #parallax_image_third {
         height: 275px;
+    }
+
+    .service-button {
+        width: 475px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .service-button, .consulting-section {
+        width: 300px;
     }
 }
