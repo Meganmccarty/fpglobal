@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="service-section">
+    <h1>Services</h1>
+    <div class="button-container">
+        {% for item in page.service_blocks.all %}
+            <a href="#{{ item.html_id }}">
+                <button class="service-button"><h3>{{ item.title }}</h3></button>
+            </a>
+        {% endfor %}
+    </div>
+</section>
+{% for item in page.service_blocks.all %}
+    <section class="text-section">
+        <h2 id="{{ item.html_id }}">{{ item.title }}</h2>
+        <span id="intro">
+            <p>{{ item.text }}</p>
+            <div class="consulting-container">
+                {% for desc in item.service_descriptions.all %}
+                    <p class="consulting-section">
+                        {{ desc.service_description }}
+                    </p>
+                {% endfor %}
+            </div>
+        </span>
+    </section>
+{% endfor %}
+<section class="text-section">
+    <h2>See What Frumenta Partners Can Do For You Today</h2>
+    <br>
+    <a href="/contact/"><button class="styled-large-button">Contact Us</button></a>
+</section>
+
+{% endblock %}
