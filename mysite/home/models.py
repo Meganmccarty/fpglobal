@@ -2,7 +2,7 @@ from django.db import models
 
 from modelcluster.fields import ParentalKey
 
-from wagtail.core.models import Page, Orderable
+from wagtail.core.models import Page, Orderable, ClusterableModel
 from wagtail.core.fields import RichTextField
 from wagtail.admin.edit_handlers import FieldPanel, FieldRowPanel, InlinePanel, MultiFieldPanel
 from wagtail.contrib.forms.models import AbstractEmailForm, AbstractFormField
@@ -32,6 +32,36 @@ class ExpertiseItem(Orderable):
 
     panels = [
         FieldPanel('expertise_item'),
+    ]
+
+class ServicePage(Page):
+    
+    content_panels = Page.content_panels + [
+        InlinePanel('service_blocks', label='Service Block'),
+    ]
+
+class ServiceBlock(ClusterableModel):
+    page = ParentalKey(ServicePage, on_delete=models.CASCADE, related_name='service_blocks')
+    title = models.CharField(max_length=250)
+    html_id = models.CharField(max_length=20, verbose_name='ID', default='',
+        help_text='Add one word describing this section; should be all lowercase')
+    text = models.TextField(blank=True, null=True)
+
+    panels = [
+        MultiFieldPanel([
+            FieldPanel('title'),
+            FieldPanel('html_id'),
+            FieldPanel('text'),
+        ], heading='Title and Text'),
+        InlinePanel('service_descriptions', label='Service Description'),
+    ]
+
+class ServiceDescription(Orderable):
+    page = ParentalKey(ServiceBlock, on_delete=models.CASCADE, related_name='service_descriptions')
+    service_description = models.TextField(blank=True, null=True)
+
+    panels = [
+        FieldPanel('service_description'),
     ]
 
 class FormField(AbstractFormField):
