@@ -26,7 +26,7 @@ class HomePage(Page):
         ], heading='Expertise')
     ]
 
-class NewsPageGalleryImage(Orderable):
+class ExpertiseItem(Orderable):
     page = ParentalKey(HomePage, on_delete=models.CASCADE, related_name='expertise_items')
     expertise_item = models.CharField(blank=True, max_length=250)
 
