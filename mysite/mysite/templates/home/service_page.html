@@ -7,7 +7,7 @@
     <div class="button-container">
         {% for item in page.service_blocks.all %}
             <a href="#{{ item.html_id }}">
-                <button class="service-button"><h3>{{ item.title }}</h3></button>
+                <h3 class="service-button">{{ item.title }}</h3>
             </a>
         {% endfor %}
     </div>

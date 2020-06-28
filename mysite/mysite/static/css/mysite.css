@@ -74,13 +74,21 @@
     width: 100%;
 }
 
+.text-section h2 {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
 #intro {
     background-color: rgb(203, 177, 150);
     border-top: 10px solid white;
     color: black;
     font-size: 25px;
     margin-bottom: -10px;
-    padding: 50px 100px 50px 100px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
     text-align: center;
     width: 100%;
 }
@@ -128,11 +136,14 @@
 
 .button-container, .consulting-container {
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     margin-top: 20px;
     margin-bottom: 20px;
+}
+
+.button-container {
+    flex-direction: column;
 }
 
 .consulting-container {
@@ -152,6 +163,7 @@
     align-items: center;
     justify-content: center;
     height: 100%;
+    text-align: center;
     width: 800px;
 }
 
@@ -159,7 +171,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 420px;
+    height: 375px;
     text-align: center;
     width: 50%;
 }
@@ -298,7 +310,7 @@
 }
 
 /* ---------- Media Queries ---------- */
-@media only screen and (max-width: 1050px) {
+@media only screen and (max-width: 1000px) {
     .consulting-container {
         flex-direction: column;
     }
@@ -335,7 +347,7 @@
 }
 
 @media only screen and (max-width: 500px) {
-    .service-button, .consulting-section {
+    .service-button/*, .consulting-section*/ {
         width: 300px;
     }
 }
