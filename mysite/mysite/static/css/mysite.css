@@ -207,6 +207,7 @@
 .footer {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     background-color: rgb(6, 38, 97);
@@ -217,9 +218,8 @@
 }
 
 .footer-item {
-    margin: 10px;
-    padding-left: 60px;
-    padding-right: 60px;
+    margin-left: 60px;
+    margin-right: 60px;
 }
 
 /* ---------- News Posts, Buttons, and Tags ---------- */
