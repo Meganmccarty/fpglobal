@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load wagtailcore_tags %}
 
 {% block content %}
 
@@ -28,9 +29,9 @@
     </section>
 {% endfor %}
 <section class="contact-section">
-    <h2>See What Frumenta Partners Can Do For You Today</h2>
+    <h1>Want to Get in Touch?</h1>
     <br>
-    <a href="/contact/"><button class="styled-large-button">Contact Us</button></a>
+    <a href="{% slugurl 'contact' %}"><button class="styled-large-button">Contact Us</button></a>
 </section>
 
 {% endblock %}
