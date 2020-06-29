@@ -1,10 +1,8 @@
 {% extends "base.html" %}
-{% load static %}
-{% load wagtailcore_tags wagtailimages_tags widget_tweaks %}
-
-{% block body_class %}template-homepage{% endblock %}
+{% load wagtailcore_tags %}
 
 {% block content %}
+
 <!--First Parallax Image-->
 <section class="parallax_section" id="parallax_image_first"></section>
 
@@ -33,31 +31,10 @@
 <section class="parallax_section" id="parallax_image_third"></section>
 
 <!--Contact Section-->
-
 <section class="contact-section">
     <h1>Want to Get in Touch?</h1>
     <br>
     <a href="{% slugurl 'contact' %}"><button class="styled-large-button">Contact Us</button></a>
 </section>
 
-<!--<section class="contact-section">
-    <h1 id="contact">Contact Us</h1>
-    <form action="/contact/" method="POST">
-        {% csrf_token %}
-        <div class="form-group">
-            <label for="id_name">Name</label>
-            <input type="text" name="name" maxlength="255" class="form-control" required id="id_name">
-        </div>
-        <div class="form-group">
-            <label for="id_email">Email</label>
-            <input type="email" name="email" class="form-control" required id="id_email">
-        </div>
-        <div class="form-group">
-            <label for="id_message">Message</label>
-            <textarea name="message" cols="40" rows="10" class="form-control" required id="id_message"></textarea>
-        </div>
-        <button type="submit" class="styled-button" >Submit</button>
-    </form>
-</section>-->
-
-{% endblock content %}
+{% endblock %}

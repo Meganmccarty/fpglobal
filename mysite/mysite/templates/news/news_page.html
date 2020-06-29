@@ -1,35 +1,32 @@
 {% extends "base.html" %}
-{% load static %}
 {% load wagtailcore_tags wagtailimages_tags %}
 
-{% block body_class %}template-newspage{% endblock %}
-
 {% block content %}
-    <article class="news-post">
-        <h1>{{ page.title }}</h1>
-        <p class="meta">By {{ page.author }} | Published {{ page.date }}</p>
 
-        <div class="img-gallery">
-            {% for item in page.gallery_images.all %}
-                <div class="news-page-img">
-                    {% image item.image width-1000 id="image" %}
-                    <p>{{ item.caption }}</p>
-                </div>
+<article class="news-post">
+    <h1>{{ page.title }}</h1>
+    <p class="meta">By {{ page.author }} | Published {{ page.date }}</p>
+
+    <div class="img-gallery">
+        {% for item in page.gallery_images.all %}
+            <div class="news-page-img">
+                {% image item.image width-1000 id="image" %}
+                <p>{{ item.caption }}</p>
+            </div>
+        {% endfor %}
+    </div>
+    
+    {{ page.body|richtext }}
+
+    {% if page.tags.all.count %}
+        <div class="tags">
+            <h3>Tags</h3>
+            {% for tag in page.tags.all %}
+                <a href="{% slugurl 'tags' %}?tag={{ tag }}"><button class="styled-tags" type="button">#{{ tag }}</button></a>
             {% endfor %}
         </div>
-       
-
-        {{ page.body|richtext }}
-
-        {% if page.tags.all.count %}
-            <div class="tags">
-                <h3>Tags</h3>
-                {% for tag in page.tags.all %}
-                    <a href="{% slugurl 'tags' %}?tag={{ tag }}"><button class="styled-tags" type="button">#{{ tag }}</button></a>
-                {% endfor %}
-            </div>
-        {% endif %}
-        <p><a href="{{ page.get_parent.url }}"><button class="styled-button">&larr; Return to News</button></a></p>
-    </article>
+    {% endif %}
+    <p><a href="{{ page.get_parent.url }}"><button class="styled-button">&larr; Return to News</button></a></p>
+</article>
 
 {% endblock %}
