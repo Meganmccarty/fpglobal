@@ -9,7 +9,7 @@ from wagtail.contrib.forms.models import AbstractEmailForm, AbstractFormField
 
 from wagtailcaptcha.models import WagtailCaptchaEmailForm
 
-
+### Home Page models
 class HomePage(Page):
     intro_title = models.CharField(max_length=200, default='', null=True, blank=True)
     intro_body = RichTextField(default='', null=True, blank=True)
@@ -34,6 +34,7 @@ class ExpertiseItem(Orderable):
         FieldPanel('expertise_item'),
     ]
 
+### Service Page Models
 class ServicePage(Page):
     
     content_panels = Page.content_panels + [
@@ -64,6 +65,15 @@ class ServiceDescription(Orderable):
         FieldPanel('service_description'),
     ]
 
+### About Us Page Models
+class AboutPage(Page):
+    body = RichTextField(default='', null=True, blank=True)
+
+    content_panels = Page.content_panels + [
+        FieldPanel('body')
+    ]
+
+### Contact Form Models
 class FormField(AbstractFormField):
     page = ParentalKey('FormPage', related_name='custom_form_fields')
 

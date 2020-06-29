@@ -175,6 +175,17 @@
     width: 50%;
 }
 
+/* ---------- About Us Page ---------- */
+
+.about-text {
+    font-size: 20px;
+    padding: 10px;
+    background-color: white;
+    margin: 30px;
+    border: 10px solid rgb(6, 38, 97);
+    text-align: left;
+}
+
 /* ---------- Contact Form ---------- */
 
 .contact-section {

@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load wagtailcore_tags %}
+
+{% block content %}
+
+<section class="service-section">
+    <h1>About us</h1>
+    <article class="about-text">
+        {{ page.body | richtext }}
+    </article>
+</section>
+
+<section class="contact-section">
+    <h2>See What Frumenta Partners Can Do For You Today</h2>
+    <br>
+    <a href="/contact/"><button class="styled-large-button">Contact Us</button></a>
+</section>
+
+{% endblock %}
