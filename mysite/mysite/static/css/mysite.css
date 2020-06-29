@@ -244,6 +244,11 @@
     margin-right: 60px;
 }
 
+.footer-item a {
+    color: white;
+    text-decoration: none;
+}
+
 /* ---------- News Posts, Buttons, and Tags ---------- */
 
 .news {
