@@ -22,6 +22,11 @@
                 </a>
             </article>
         {% endwith %}
+
+        {% empty %}
+            <article class="news-post">
+                <h2>No news posts yet. Check back soon!</h2>
+            </article>
     {% endfor %}
 </section>
 
