@@ -30,7 +30,7 @@
 }
 
 #parallax_image_first {
-    background-image: url("../../../media/GY68KT.jpg");
+    background-image: url("../../../media/mountains.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -40,7 +40,7 @@
 }
 
 #parallax_image_second {
-    background-image: url("../../../media/GPBGA4.jpg");
+    background-image: url("../../../media/sunset.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -50,7 +50,7 @@
 }
 
 #parallax_image_third {
-    background-image: url("../../../media/E5790D.jpg");
+    background-image: url("../../../media/skipper.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
